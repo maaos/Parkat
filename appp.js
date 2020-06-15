@@ -8,7 +8,7 @@ const app = express();
 
 
 //CONECTARE CU MongoDB
-mongoose.connect("mongodb://localhost:27017/parkbvDB", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://user1:parola123@cluster0-2iucl.mongodb.net/cluster0-shard-00-02-2iucl.mongodb.net:27017?retryWrites=true&w=majority", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
 
 // IA CONEXIUNE DB SI VERIFICA DACA LA CONNECT E EROARE
 var db = mongoose.connection;
