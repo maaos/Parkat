@@ -2,7 +2,7 @@
   "name": "park",
   "version": "1.0.0",
   "scripts": {
-    "start": "node app.js"
+    "start": "node appp.js"
   },
   "description": "",
   "main": "appp.js",
