@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Park@</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,400;1,600&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/park.app.css">
+
+</head>
+
+<body>
+
+
+    <!-- Sectiune Titlu -->
+
+    <section id="title">
+        <div class="container-fluid">
+
+            <%- include('navbar'); -%>
+
+
+            <!-- Titlu -->
+
+            <div class="row">
+
+                <div class="col">
+                    <h1 class="titlu-mare">Parchează Inteligent</h1>
+                    <br>
+                    <p>Folosește acum un loc de parcare oferit de cineva din comunitatea ta.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <p>Nume: <%= user.nume %></p> 
+        <p>Email: <%= user.email %></p>
+        <p>Telefon: <%= user.telefon %></p>
+
+
+    </section>
+
+
+    <%- include('scripts'); -%>
+</body>
+
+</html>

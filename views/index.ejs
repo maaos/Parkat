@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Park@BV</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,100;1,400;1,600&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/park.app.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- Modalul -->
+    <div class="modal fade modal-dialog modal-lg" id="logmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Titlu Modal -->
+                <div class="modal-header text-mic">
+                    <h4 class="modal-title">Intră in cont</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Body Modal -->
+                <div class="modal-body">
+
+                    <form action="/login" method="POST">
+                        <input type="email" name="username" class="form-control login" placeholder="Email" required
+                            autofocus>
+                        <input type="password" name="password" class="form-control login" placeholder="Parola" required>
+
+                        <button class="btn btn-lg btn-primary btn-block btnlog" type="submit">Log In</button>
+                    </form>
+                </div>
+
+                <!-- Footer Modal -->
+                <div class="modal-footer">
+                    <a href="/inregistrare">Crează un cont</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Sectiune Titlu -->
+
+    <section id="title">
+        <div class="container-fluid">
+
+            <%- include('navbar'); -%>
+
+
+            <!-- Titlu -->
+
+            <div class="row">
+
+                <div class="col">
+                    <h1 class="titlu-mare">Parchează Inteligent</h1>
+                    <br>
+                    <p>Folosește acum un loc de parcare oferit de cineva din comunitatea ta.</p>
+                </div>
+
+            </div>
+
+            <br>
+
+            <!-- Input Start Page -->
+            <div class="row">
+
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <input type="text" placeholder="Caută" aria-label="Adresa cautată"
+                            aria-describedby="buton-cautare1">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary btn-lg btn-lg" type="button" id="buton-cautare1">
+                                Găsește locul de parcare <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Butoane DL -->
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i>
+                        Descarcă</button>
+                    <button type="button" class="btn btn-outline-light btn-lg download-button"><i
+                            class="fab fa-google-play"></i> Descarcă</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Sectiune Carusel -->
+
+    <section id="sectiune-carusel">
+
+        <div id="carusel" class="carousel slide" data-ride="carousel" data-interval="20000">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active carusel1">
+                    <img class="iphone-image" src="images/iphone-mockup.png" alt="iphone-mockup">
+                    <h2 class="text-carusel">Împarte locul tău de parcare atunci când nu îl utilizezi și ajută la
+                        eficientizarea orașului tău.</h2>
+                    <i class="fas fa-search-location big-icon"></i>
+                </div>
+
+                <div class="carousel-item carusel1 caruselbv">
+                    <img src="images/bv3.jpg" class="d-block w-100 bvimg" alt="Brasov">
+                    <h2 class="text-carusel">Împarte locul tău de parcare atunci când nu îl utilizezi și ajută la
+                        eficientizarea orașului tău. </h2>
+                    <i class="fa fa-parking big-icon"></i>
+
+                </div>
+                <a class="carousel-control-prev" href="#carusel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                </a>
+                <a class="carousel-control-next" href="#carusel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                </a>
+            </div>
+
+
+    </section>
+
+    <!-- Sectiune indemnare la actiune -->
+
+    <section id="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="titlu-mare">Împarte Locul Tău de Parcare Sau Găsește Unul Acum.</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="download-button btn btn-dark btn-lg"><i class="fab fa-apple"></i>
+                        Descarcă</button>
+                    <button type="button" class="download-button btn btn-outline-light btn-lg "><i
+                            class="fab fa-google-play"></i> Descarcă</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('footer'); -%>
+    <%- include('scripts'); -%>
+
+</body>
+
+</html>
