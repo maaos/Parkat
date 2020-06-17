@@ -8,7 +8,7 @@ const app = express();
 
 
 //CONECTARE CU MongoDB
-mongoose.connect("mongodb+srv://user1:parola123@cluster0-2iucl.mongodb.net/cluster0-shard-00-02-2iucl.mongodb.net:27017?retryWrites=true&w=majority", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost:27017/parkbvDB", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
 
 // IA CONEXIUNE DB SI VERIFICA DACA LA CONNECT E EROARE
 var db = mongoose.connection;
@@ -79,6 +79,44 @@ var UserSchema = new Schema({
 });
 
 var User = mongoose.model('User', UserSchema);
+
+//FIND USERS
+
+// User.find(function(err, users){
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log(users);
+//     }
+// });
+
+// UPDATE USERS
+
+// User.findOne({_id: "5ee76e43789b99bf4434d3ff"}).exec(function(err, user){
+//     user.nume = "Manescu";
+// });
+ 
+ 
+//DELETE
+
+// User.findOneAndDelete({name: "Pedro"}, function(err){
+//     if(err) {
+//         console.log(err);
+//     }else {
+//         console.log("Sters cu succes");
+//     }
+// });
+
+//DELETE2
+
+User.deleteOne({_id: ("5ee7b001f42e50d9fc4c4b5b")}).exec(function(err, user){
+    if (err){
+        console.log(err);
+    } else {
+    user.nume = "Urzeala";
+    console.log("User sters");
+    }
+});
 
 
 // ADAUGAREA PAGINILOR WEB IN SERVER
