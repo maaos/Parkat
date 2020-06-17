@@ -229,6 +229,7 @@ app.get("/logout", function (req, res) {
 
 
 //PORNESTE SERVERUL PE PORT 3002
+const port = process.env.PORT || 3002; 
 app.listen(3002, function () {
     console.log("Server started on port 3002");
 });
