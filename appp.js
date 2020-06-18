@@ -8,7 +8,7 @@ const app = express();
 
 
 //CONECTARE CU MongoDB
-mongoose.connect("mongodb://localhost:27017/parkbvDB", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost:27017/parkbvDB", { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true });
 
 // IA CONEXIUNE DB SI VERIFICA DACA LA CONNECT E EROARE
 var db = mongoose.connection;
@@ -229,7 +229,6 @@ app.get("/logout", function (req, res) {
 
 
 //PORNESTE SERVERUL PE PORT 3002
-const port = process.env.PORT || 3002; 
-app.listen(3002, function () {
+app.listen(process.env.PORT || 3002, function () {
     console.log("Server started on port 3002");
 });
